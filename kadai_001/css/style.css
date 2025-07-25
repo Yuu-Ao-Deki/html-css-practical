@@ -15,14 +15,22 @@ body {
 /* ヘッダー */
 header {
   display: flex;
+   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   padding: 20px;
   background: #f8f8f8;
 }
 
 header h1 {
   font-size: 34px; /* ナビの文字サイズ */
+}
+
+header h1 a {
+  text-decoration: none;
+  color: #000;
+  font-size: 34px;
 }
 
 header nav ul {
@@ -127,16 +135,22 @@ footer {
 
 /* スマホ対応 */
 @media (max-width: 768px) {
-  .about-content {
+  header {
     flex-direction: column;
+    text-align: center;
+    gap: 10px;
   }
 
-  .works-gallery {
+  header nav ul {
     flex-direction: column;
-    align-items: center;
+    padding: 0;
   }
 
-  .works-gallery figure {
-    width: 90%;
+  header nav ul li {
+    margin: 10px 0;
   }
 
+  header nav ul li a {
+    font-size: 24px;
+  }
+}
